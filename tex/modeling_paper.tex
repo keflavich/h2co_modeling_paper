@@ -19,9 +19,9 @@ In approximate order of relative importance, these are:
 The optical depths can be used to directly determine the volume and column
 density of \ortho, but with major degeneracies with abundance.
 
-\FigureThreePDF{figures/tau_vs_density_thinlimit_sigmavary_Xm10}
-               {figures/tau_vs_density_thinlimit_sigmavary_Xm9}
-               {figures/tau_vs_density_thinlimit_sigmavary_Xm8}
+\FigureThreePDF{../figures/tau_vs_density_thinlimit_sigmavary_Xm10}
+               {../figures/tau_vs_density_thinlimit_sigmavary_Xm9}
+               {../figures/tau_vs_density_thinlimit_sigmavary_Xm8}
 {Optical depth of \ortho \oneone and \twotwo as a function of \dens for three
 different abundances.  The different $\sigma$ values represent different widths
 of lognormal distributions.
@@ -34,9 +34,9 @@ of lognormal distributions.
 Optical depth ratios have much less variation with abundance and are therefore more universally
 robust, but there is only a limited regime in which the ratio can significantly distinguish densities.
 
-\FigureThreePDF{figures/tau_ratio_vs_density_thinlimit_sigmavary_Xm10}
-               {figures/tau_ratio_vs_density_thinlimit_sigmavary_Xm9}
-               {figures/tau_ratio_vs_density_thinlimit_sigmavary_Xm8}
+\FigureThreePDF{../figures/tau_ratio_vs_density_thinlimit_sigmavary_Xm10}
+               {../figures/tau_ratio_vs_density_thinlimit_sigmavary_Xm9}
+               {../figures/tau_ratio_vs_density_thinlimit_sigmavary_Xm8}
 {Optical depth ratios of \ortho \oneone / \twotwo as a function of \dens for three
 different abundances.  The different $\sigma$ values represent different widths
 of lognormal distributions.
@@ -49,13 +49,22 @@ The \citet{Troscompt2009a} collisional coefficients only cover the
 \formaldehyde energy levels with upper energy $E_U<50$ K. This means they
 should not be used above, say, 30 K.  Figure \ref{fig:trosfaur} shows
 the optical depths computed using the two different collisional coefficients;
-significant discrepancies appear at T$=50K$, $n=10^6 \percc$.
+significant discrepancies appear at T$=50K$, $n=10^6 \percc$.  The \citet{Green1991a}
+coefficients are also shown.
 
-\FigureThreePDF{figures/Faure_Troscompt_compare_T=20}
-               {figures/Faure_Troscompt_compare_T=50}
-               {figures/Faure_Troscompt_compare_T=80}
+% compare_faure_tros
+\FigureThreePDF{../figures/Faure_Troscompt_compare_T=20_sigma=0}
+               {../figures/Faure_Troscompt_compare_T=50_sigma=0}
+               {../figures/Faure_Troscompt_compare_T=80_sigma=0}
 {Optical depth as a function of density for 3 different temperatures and 3 different
-abundances using the \citet{Troscompt2009a} and \citet{Faure2013a} collision rates.}
+abundances using the \citet{Troscompt2009a}, \citet{Wiesenfeld2013a}, and \citet{Green1991a} collision rates.
+The Troscompt \& Wiesenfeld results show an ortho/para ratio $OPR=1$; Green does not account for ortho \hh.
+The agreement between the three is fairly good under most conditions, especially low density, though the
+Green rates are somewhat discrepant at low density \& temperature.  The only major \& notable change is 
+that the \oneone population is significantly depleted at high density using the \citet{Wiesenfeld2013a} rates.
+The colors show different abundances, from highest $\tau$ to lowest:
+$X=10^{-8}$, $X=10^{-9}$, $X=10^{-10}$.} 
 {fig:trosfaur}
 
+\input{solobib}
 \end{document}
