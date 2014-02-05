@@ -1,0 +1,61 @@
+\include{preface}
+\title{Notes on Modeling Formaldehyde}
+
+The \ortho \oneone and \twotwo lines have optical depths and line
+brightnesses dependent on a number of different factors all to varying degrees.
+In approximate order of relative importance, these are:
+
+\begin{enumerate}
+    \item Volume density ($n(\hh)$ \percc)
+    \item Column Density ($N(\ortho)$ \persc) \perkms
+          (degenerate with abundance $X_{\ortho}$ and velocity gradient)
+    \item Ortho/Para ratio of \hh
+    \item Helium abundance (similar effect as p-\hh)
+    \item Temperature
+\end{enumerate}
+
+
+\section{Optical Depths}
+The optical depths can be used to directly determine the volume and column
+density of \ortho, but with major degeneracies with abundance.
+
+\FigureThreePDF{figures/tau_vs_density_thinlimit_sigmavary_Xm10}
+               {figures/tau_vs_density_thinlimit_sigmavary_Xm9}
+               {figures/tau_vs_density_thinlimit_sigmavary_Xm8}
+{Optical depth of \ortho \oneone and \twotwo as a function of \dens for three
+different abundances.  The different $\sigma$ values represent different widths
+of lognormal distributions.
+(a) $X=10^{-10}$ (b) $X=10^{-9}$ (c) $X=10^{-8}$
+}
+{fig:tauvsdens}
+.
+
+\section{Ratios}
+Optical depth ratios have much less variation with abundance and are therefore more universally
+robust, but there is only a limited regime in which the ratio can significantly distinguish densities.
+
+\FigureThreePDF{figures/tau_ratio_vs_density_thinlimit_sigmavary_Xm10}
+               {figures/tau_ratio_vs_density_thinlimit_sigmavary_Xm9}
+               {figures/tau_ratio_vs_density_thinlimit_sigmavary_Xm8}
+{Optical depth ratios of \ortho \oneone / \twotwo as a function of \dens for three
+different abundances.  The different $\sigma$ values represent different widths
+of lognormal distributions.
+(a) $X=10^{-10}$ (b) $X=10^{-9}$ (c) $X=10^{-8}$ }
+{fig:ratiovsdens}
+
+
+\section{Collisional Coefficients}
+The \citet{Troscompt2009a} collisional coefficients only cover the
+\formaldehyde energy levels with upper energy $E_U<50$ K. This means they
+should not be used above, say, 30 K.  Figure \ref{fig:trosfaur} shows
+the optical depths computed using the two different collisional coefficients;
+significant discrepancies appear at T$=50K$, $n=10^6 \percc$.
+
+\FigureThreePDF{figures/Faure_Troscompt_compare_T=20}
+               {figures/Faure_Troscompt_compare_T=50}
+               {figures/Faure_Troscompt_compare_T=80}
+{Optical depth as a function of density for 3 different temperatures and 3 different
+abundances using the \citet{Troscompt2009a} and \citet{Faure2013a} collision rates.}
+{fig:trosfaur}
+
+\end{document}
